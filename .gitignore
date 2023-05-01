@@ -6,3 +6,4 @@
 .env
 request.py
 test.py
+.vscode

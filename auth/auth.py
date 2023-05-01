@@ -1,23 +1,23 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
-from models import User, SignupForm, LoginForm, db
-from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy.exc import IntegrityError, SQLAlchemyError
+from flask import Blueprint, render_template
+from models import LoginForm, SignupForm, TwoFactorForm
 
 bp = Blueprint("user_auth", __name__, url_prefix="/auth")
 
 
-@bp.route("/login")
+@bp.route("/login", methods=["POST", "GET"])
 def login():
-    pass
-
+    form = LoginForm()
+    return render_template('login.html', form=form)
 
 @bp.route("/signup", methods=["POST", "GET"])
 def signup():
-    pass
+    form = SignupForm()
+    return render_template('signup.html', form=form)
 
-@bp.route("/validate")
+@bp.route("/validate", methods=["POST", "GET"])
 def validate():
-    return render_template("validate.html")
+    form = TwoFactorForm()
+    return render_template("validate.html", form=form)
 
 @bp.route("/logout")
 def logout():

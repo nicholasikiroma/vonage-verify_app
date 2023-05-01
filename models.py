@@ -30,5 +30,5 @@ class LoginForm(FlaskForm):
     password = PasswordField(label="Password", validators=[InputRequired(message="Password cannot be left blank")])
 
 
-class LoginForm(FlaskForm):
+class TwoFactorForm(FlaskForm):
     code = StringField(label="Enter Code:", validators=[InputRequired(message="Enter valid code")])
