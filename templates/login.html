@@ -12,7 +12,13 @@
         >
           Sign-in
         </h1>
-        <form class="space-y-4 md:space-y-6" action="#">
+        <div>
+          {% with messages = get_flashed_messages() %} {% for message in
+          messages %}
+          <small class="text-red-500">{{message}}</small>
+          {% endfor %} {% endwith %}
+        </div>
+        <form class="space-y-4 md:space-y-6" action="{{ url_for('user_auth.login') }}" method="POST">
           {{ form.hidden_tag() }}
           <div>
             {{ form.username.label(class="block mb-2 text-sm font-medium
