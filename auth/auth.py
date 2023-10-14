@@ -32,12 +32,11 @@ def login():
 
         if user and check_password_hash(user.password, password):
             phone_no = str(user.phone_no)
-
             try:
                 response = verify.new_request(
                     {
                         "brand": "Vonage Verify",
-                        "workflow": [{"channel": "sms", "to": "234" + phone_no}],
+                        "workflow": [{"channel": "whatsapp", "to": "234" + phone_no}],
                     }
                 )
 
