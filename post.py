@@ -105,6 +105,7 @@ posts = [
 
 
 def get_post_by_id(post_id):
+    """returns post with matching post_id"""
     for post in posts:
         if post['id'] == post_id:
             return post

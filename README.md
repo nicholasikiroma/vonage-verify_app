@@ -1,19 +1,45 @@
-# Project Title - Implementing 2FA in Flask App with Vonage Verify
+# Project Title - Starter-kit for Flask-Vonage Tutorial
 
-## Description:
+![flask-vonage tutorial](https://images2.imgbox.com/7c/8a/XrfTBCSs_o.png?download=true)
 
-## Usage:
+## Description
+
+Starter kit for Flask-Vonage Tutorial
+
+## Usage
 
 clone repo
 
-    git clone https://github.com/nicholasikiroma/vonage-verify_app
+```bash
+git clone https://github.com/nicholasikiroma/vonage-verify_app
+```
+
+Navigate to project directory
+
+```bash
+cd vonage-verify_app
+```
+
+Install virtuelenv (if you don't have it installed already)
+
+```bash
+pip3 install virtualenv
+```
+
+Create virtual environment
+
+```bash
+virtualenv venv
+```
+
+Activate virtual environment
+
+```bash
+source venv/bin/activate
+```
 
 Install dependencies
 
-    pip3 install -r requirements.txt
-
-
-Run app
-
-    flask run --debug
-
+```bash
+pip3 install -r requirements.txt
+```
