@@ -38,8 +38,14 @@ Activate virtual environment
 source venv/bin/activate
 ```
 
-Install dependencies
+Install dependencies (you can activate a virtual environment before installing dependencies):
 
 ```bash
 pip3 install -r requirements.txt
+```
+
+Run app:
+
+```bash
+flask run --debug
 ```
